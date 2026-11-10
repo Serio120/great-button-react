@@ -1,67 +1,61 @@
-t # React + Vite
+# Great Button React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pequeño proyecto didáctico para practicar componentes reutilizables en React y el paso de propiedades (*props*).
 
-Currently, two official plugins are available:
+## Qué incluye
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Un componente `MiBoton` que recibe el texto mediante la prop `texto`.
+- Un botón HTML semántico y un enlace externo al curso de React.
+- Estilos adaptables a pantallas pequeñas, estados de foco visibles y respeto por la preferencia de movimiento reducido.
+- Vite para desarrollo y compilación, y ESLint para revisar el código.
 
-## Expanding the ESLint configuration
+## Requisitos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js 20.19+ o 22.12+.
+- npm (incluido con Node.js).
 
-<nav style="color:red;">___________________________________________________________________________________________________________________________________________________________________</nav>
-
-## Basico Aplicación
-
-```bash
-    #En este caso git bash
-
-    npm --version
-    # Ya lo dice el comando 
-
-    npm create vite
-    #Lo más simple  (En este caso React y JavaScript)
-
-    cd mi-carpeta-projecto
-    # O repositorio local
-
-    npm install
-    # Instalamos dependencias
-
-    npm run dev
-    # Lanzamos el proyecto o aplicación
-    # dev es un Script en el archivo package.json
-
-```
-
-## Basico Git-GitHub
+## Instalación
 
 ```bash
-
-    git status
-
-    git branch -m main
-    # Cambio nombre rama principal
-
-    git add .
-
-    git status
-
-    git commit -m "Aplicación lista para repositorio"
-
-    git branch -M main
-    # Te lo vuelve a decir GitHub
-
-    git remote add origin https://github.com/Serio120/great-button-react.git
-    # Indicamos el repositorio remoto
-
-    git push -u origin main
-
-
-
-
+git clone https://github.com/Serio120/great-button-react.git
+cd great-button-react
+npm ci
 ```
 
+## Desarrollo
 
+```bash
+npm run dev
+```
+
+Vite mostrará la dirección local en la que puedes abrir la aplicación.
+
+## Comprobaciones
+
+```bash
+npm run lint
+npm run build
+```
+
+## Estructura
+
+```text
+src/
+├── components/
+│   └── MiBoton.jsx
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+index.html
+package.json
+vite.config.js
+```
+
+## Aprendizaje
+
+En `src/App.jsx`, el componente principal utiliza `MiBoton` y le pasa el texto con `<MiBoton texto="Mi botón" />`. Puedes modificar esa prop para observar cómo se reutiliza el componente.
+
+## Licencia
+
+No se ha especificado una licencia para este repositorio. Consulta al propietario antes de reutilizar o distribuir el código.

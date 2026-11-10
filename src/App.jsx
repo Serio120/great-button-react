@@ -1,25 +1,29 @@
-// Hemos limpiado la aplicación
 import './App.css'
-import MiBoton from './components/Miboton' // Importamos el componente MiBoton desde el archivo components/Miboton.jsx
+import MiBoton from './components/MiBoton.jsx'
 
 function App() {
-
   return (
-    <>
-      {/* Renderizamos el componente MiBoton con las expresiones < />*/}
-      <MiBoton texto='Mi Botón'/>  
-      {/* Este es un botón que muestra el texto 'Mi Botón' */}
-      {/* Puedes cambiar el texto del botón pasando una propiedad al componente MiBoton */}
-      {/* El componente MiBoton se encuentra en el archivo components/Miboton.jsx */}
-      {/* Este componente es el que se renderiza en la aplicación y muestra un botón */}
-     </>
+    <main className="app">
+      <header className="app__header">
+        <p className="app__eyebrow">React · Componentes</p>
+        <h1>Mi primer componente de botón</h1>
+        <p className="app__intro">
+          Un ejemplo pequeño para practicar cómo crear un componente reutilizable
+          y pasarle contenido mediante props.
+        </p>
+      </header>
+
+      <section className="demo-card" aria-labelledby="demo-title">
+        <h2 id="demo-title">Demostración</h2>
+        <p>El primer botón recibe su texto desde la propiedad <code>texto</code>.</p>
+        <MiBoton texto="Mi botón" />
+      </section>
+
+      <footer className="app__footer">
+        Proyecto de aprendizaje con React y Vite.
+      </footer>
+    </main>
   )
 }
 
-export default App // Exportamos el componente App para que pueda ser utilizado en otros archivos
-
-// Este es el componente principal de la aplicación, que renderiza el componente MiBoton
-// Aquí hemos limpiado la aplicación y mantenido solo lo necesario para que funcione correctamente
-// El componente MiBoton se encuentra en el archivo components/Miboton.jsx
-// Este componente es el que se renderiza en la aplicación y muestra un botón
-// La aplicación está configurada para utilizar Vite como herramienta de construcción y desarrollo
+export default App
